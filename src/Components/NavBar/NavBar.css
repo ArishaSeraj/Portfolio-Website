@@ -1,0 +1,130 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(5px); 
+  }
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 1200px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.planet {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; 
+}
+
+.planet.home {
+    background-image: url('../Assets/Planet_1.png');
+    height: 80px;
+    width: 80px;  
+}
+
+.planet.projects {
+    background-image: url('../Assets/Planet_2.png');
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+}
+
+.planet.skills {
+    background-image: url('../Assets/Planet_1.png');
+    height: 80px;
+    width: 80px;  
+}
+.planet-label {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+
+.nav-item:hover .planet {
+    transform: scale(1.2); 
+}
+.nav-item:hover .planet-label {
+    opacity: 1;
+}
+.planet-label {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.navbar-nav span {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar-nav span:hover {
+    color: #64ffda; 
+    transform: scale(1.1);
+}
+
+.connect {
+    padding-right: 60px;
+    margin-right: 60px; 
+  }
+  
+.connect-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a5acd, #48c6ef);
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+  
+
+.connect-btn:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
+}
+.connect-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5); 
+} 
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      gap: 15px;
+    }
+}
+

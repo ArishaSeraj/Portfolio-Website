@@ -1,0 +1,143 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-page {
+  background-image: var(--bg-image); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  min-height: 100vh;
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+}
+
+section {
+  width: 100%; 
+  min-height: 100vh; 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  margin: 0; 
+  text-align: center; 
+}
+
+.shooting-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; 
+  overflow: hidden;
+  z-index: 1; 
+}
+
+/* Shooting Star */
+.shooting-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; 
+  overflow: hidden;
+  z-index: 1000; 
+}
+
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px; 
+  height: 100px; 
+  background: linear-gradient(120deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  opacity: 0; 
+  transform: rotate(120deg); 
+  animation: shooting-star-animation 3s linear infinite;
+}
+
+@keyframes shooting-star-animation {
+  0% {
+    transform: translate(0, 0) rotate(120deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(120deg);
+    opacity: 0;
+  }
+}
+
+.shooting-star:nth-child(odd) {
+  animation-delay: calc(var(--index) * 1s);
+  left: calc(50% - var(--index) * 10%);
+  top: calc(var(--index) * 5%);
+}
+.shooting-star:nth-child(even) {
+  animation-delay: calc(var(--index) * 1.5s);
+  left: calc(var(--index) * 3%);
+  top: calc(var(--index) * 7%);
+}
+
+.rocket {
+  position: absolute;
+  width: 100px; 
+  height: auto;
+  transform: rotate(120deg); 
+  opacity: 0;
+}
+
+.rocket img {
+  width: 100%; 
+  height: auto;
+  transform: rotate(-50deg);
+}
+
+@keyframes rocket-animation {
+  0% {
+    transform: translate(0, 0) rotate(120deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(120deg);
+    opacity: 0;
+  }
+}
+
+.rocket {
+  animation: rocket-animation 20s linear infinite;
+}
+
+.rocket:nth-child(odd) {
+  animation-delay: calc(var(--index) * 1s);
+  left: calc(50% - var(--index) * 10%);
+  top: calc(var(--index) * 5%);
+}
+
+.rocket:nth-child(even) {
+  animation-delay: calc(var(--index) * 1.5s);
+  left: calc(var(--index) * 3%);
+  top: calc(var(--index) * 7%);
+}
+

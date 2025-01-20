@@ -1,0 +1,105 @@
+banner {
+  margin-left: 0;
+  width: 100%;
+  height: 100vh; 
+  align-items: center; 
+  display: flex; 
+  justify-content: space-between; 
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  padding: 0 50px; 
+}
+
+.banner .tagline {
+    margin-top: 180px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+    text-align: left;
+}
+.banner h1 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.0;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+}
+.banner h1 span {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.banner p {
+  .banner p {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    max-width: 600px;
+    text-align: left; 
+}
+}
+.connect {
+  text-align: left; 
+}
+
+.banner .text-content {
+  max-width: 50%; 
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: center; 
+}
+.social-icons {
+  padding-top: 40px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+  cursor: pointer; 
+}
+.image-container {
+  max-width: 100% ;
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  padding-bottom: 800px;
+}
+.image-container .header-img {
+  max-width: 100%; 
+  height: auto;
+  animation: updown 3s ease-in-out infinite;
+  margin-top: 80px; 
+}  
+
+@keyframes updown {
+  0% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
+}
