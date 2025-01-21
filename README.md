@@ -55,6 +55,6 @@ Here’s a breakdown of the technical stack and tools utilized:
 ---
 
 ### 💌 **Let’s Connect**  
-Check out my live portfolio to experience the galaxy yourself and get in touch: 🌟 **[Your Portfolio Link]** 🌟  
+Check out my live portfolio to experience the galaxy yourself and get in touch. 🌟  
 
 Hope you enjoy exploring my space-themed portfolio! 🌌✨  
